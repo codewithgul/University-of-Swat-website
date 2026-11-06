@@ -1,0 +1,479 @@
+/* General Styling */
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+.university-navbar {
+    background-color: #06452E;
+    padding: 18px 0;
+}
+
+.navbar-brand {
+    font-size: 22px;
+}
+
+.nav-link {
+    margin-left: 12px;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #D6A62E !important;
+    text-decoration: underline;
+    text-decoration-color: #D6A62E;
+    text-underline-offset: 6px;
+}
+
+.nav-link.active {
+    color: #D6A62E !important;
+    font-weight: bold;
+}
+
+/* Welcome Section */
+.hero-section {
+    background-color: #F3F6F3;
+    padding: 100px 20px;
+    text-align: center;
+
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.55)
+    ), url("../images/campus.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-section h1 {
+    color:#FFFFFF
+}
+
+.hero-section p {
+    color:#FFFFFF
+}
+
+.hero-section .btn {
+    background-color: #06452E;
+    color: #FFFFFF;
+    border: 2px solid #D6A62E;
+    padding: 12px 28px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.hero-section .btn:hover {
+    background-color: #A8D5B5;
+    color: #06452E;
+    border-color: #A8D5B5;
+}
+
+/* About University Section */
+.about-section {
+    padding: 70px 20px;
+    background-color: #FFFFFF;
+}
+
+.about-section h2 {
+    color: #06452E;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.about-section p {
+    color: #555555;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 850px;
+    margin: 0 auto 25px;
+}
+
+.about-btn {
+    background-color: #06452E;
+    color: white;
+    padding: 12px 25px;
+}
+
+.about-btn:hover {
+    background-color: #087A50;
+    color: white;
+}
+
+/* University Highlights Section */
+.highlights-section {
+    padding: 70px 20px;
+    background-color: #F3F6F3;
+}
+
+.highlights-section h2 {
+    color: #06452E;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.highlight-card {
+    background-color: white;
+    padding: 35px 20px;
+    text-align: center;
+    border-radius: 10px;
+    height: 100%;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+}
+
+.highlight-card h3 {
+    color: #06452E;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.highlight-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Latest News Section */
+.news-section {
+    padding: 70px 20px;
+    background-color: #FFFFFF;
+}
+
+.news-section h2 {
+    color: #06452E;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.news-card {
+    background-color: #F3F6F3;
+    padding: 30px;
+    border-radius: 10px;
+    height: 100%;
+    border-bottom: 4px solid #087A50;
+    transition: transform 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-category {
+    color: #087A50;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.news-card h3 {
+    color: #06452E;
+    font-size: 21px;
+    margin: 15px 0;
+}
+
+.news-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.news-card a {
+    color: #087A50;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.news-card a:hover {
+    text-decoration: underline;
+}
+
+/* Important Links Section */
+.links-section {
+    padding: 70px 20px;
+    background-color: #F3F6F3;
+}
+
+.links-section h2 {
+    color: #06452E;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.service-card {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    height: 100%;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    color: #06452E;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.service-card a {
+    color: #087A50;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 70px 20px;
+    background-color: #F3F6F3;
+}
+
+.contact-section h2 {
+    color: #06452E;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.contact-card {
+    background-color: white;
+    padding: 40px 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card h3 {
+    color: #06452E;
+    margin-bottom: 20px;
+}
+
+.contact-card p {
+    color: #555;
+    line-height: 1.8;
+}
+
+.contact-btn {
+    background-color: #06452E;
+    color: white;
+    padding: 12px 25px;
+}
+
+.contact-btn:hover {
+    background-color: #087A50;
+    color: white;
+}
+
+/* Academics Section */
+.academics-section {
+    padding: 70px 20px;
+    background-color: #FFFFFF;
+}
+
+.academics-section h2 {
+    color: #06452E;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.department-card {
+    background-color: #F3F6F3;
+    padding: 35px 25px;
+    border-radius: 10px;
+    height: 100%;
+    border-left: 4px solid #087A50;
+    transition: transform 0.3s;
+}
+
+.department-card:hover {
+    transform: translateY(-5px);
+}
+
+.department-card h3 {
+    color: #06452E;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.department-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.department-card a {
+    color: #087A50;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Footer */
+.footer {
+    background-color: #06452E;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    font-size: 15px;
+}
+
+.footer .copyright {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #D6D6D6;
+}
+
+/* Navigation Improvements */
+.university-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-link {
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #D6A62E !important;
+}
+
+.navbar-brand {
+    letter-spacing: 1px;
+}
+
+/* Navigation Improvements */
+.university-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-link {
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+    position:relative;
+}
+
+.nav-link:hover {
+    color: #D6A62E !important;
+    text-decoration: underline;
+    text-decoration-color: #D6A62E;
+    text-underline-offset: 6px;
+}
+
+.navbar-brand {
+    letter-spacing: 1px;
+}
+
+/* Admissions Section */
+.admissions-section {
+    padding: 70px 0;
+    background-color: #F3F6F3;
+}
+
+.admissions-section .section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.admissions-section h2 {
+    color: #06452E;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.admissions-section .section-heading p {
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.admission-card {
+    background-color: white;
+    padding: 30px;
+    height: 100%;
+    border-radius: 10px;
+    border-bottom: 4px solid #D6A62E;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.admission-card:hover {
+    transform: translateY(-6px);
+}
+
+.admission-card h4 {
+    color: #06452E;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.admission-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+.admission-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #087A50;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.admission-card a:hover {
+    color: #D6A62E;
+}
+
+/* Responsive Design - Mobile Screens */
+
+@media (max-width: 576px) {
+
+    .hero-section h1 {
+        font-size: 28px;
+    }
+
+    .hero-section p {
+        font-size: 15px;
+    }
+
+    .hero-section {
+        padding: 70px 15px;
+    }
+
+}
