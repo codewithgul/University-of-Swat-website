@@ -1095,3 +1095,83 @@ footer a:hover {
         margin-top: 5px;
     }
 }
+
+/* CLEAN ADMISSIONS INFORMATION LIST */
+
+.admission-list {
+    max-width: 1050px;
+    margin: 35px auto 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.admission-row {
+    display: grid;
+    grid-template-columns: 65px 1fr auto;
+    align-items: center;
+    gap: 25px;
+    padding: 27px 15px;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.25s ease;
+}
+
+.admission-row:hover {
+    background-color: var(--light-background);
+}
+
+.admission-number {
+    color: var(--gold-hover);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.admission-details h4 {
+    color: var(--primary-green);
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 7px;
+}
+
+.admission-details p {
+    color: var(--muted-text);
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.admission-row > a {
+    color: var(--primary-green);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.25s ease;
+}
+
+.admission-row > a:hover {
+    color: var(--gold-hover);
+}
+
+@media (max-width: 768px) {
+    .admission-row {
+        grid-template-columns: 40px 1fr;
+        gap: 12px;
+        padding: 22px 8px;
+    }
+
+    .admission-number {
+        font-size: 15px;
+    }
+
+    .admission-details h4 {
+        font-size: 15px;
+    }
+
+    .admission-details p {
+        font-size: 13px;
+    }
+
+    .admission-row > a {
+        grid-column: 2;
+        font-size: 12px;
+    }
+}
