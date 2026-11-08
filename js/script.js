@@ -1,6 +1,8 @@
-// Display current date
-
 document.addEventListener("DOMContentLoaded", function () {
+
+    // =====================================
+    // 1. DISPLAY CURRENT DATE
+    // =====================================
 
     const dateElement = document.getElementById("current-date");
 
@@ -15,11 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-});
 
-// Student Quick Access Search
-
-document.addEventListener("DOMContentLoaded", function () {
+    // =====================================
+    // 2. STUDENT QUICK ACCESS SEARCH
+    // =====================================
 
     const searchInput = document.getElementById("student-search");
     const cards = document.querySelectorAll(".quick-card");
@@ -29,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         searchInput.addEventListener("input", function () {
 
-            const searchText = searchInput.value.toLowerCase();
+            const searchText = searchInput.value.trim().toLowerCase();
             let visibleCards = 0;
 
             cards.forEach(function (card) {
@@ -37,34 +38,35 @@ document.addEventListener("DOMContentLoaded", function () {
                 const cardText = card.textContent.toLowerCase();
 
                 if (cardText.includes(searchText)) {
-                    card.style.display = "";
+                    card.hidden = false;
                     visibleCards++;
                 } else {
-                    card.style.display = "none";
+                    card.hidden = true;
                 }
 
             });
 
-            if (visibleCards === 0) {
-                message.textContent = "No matching services found.";
-            } else {
-                message.textContent = "";
+            if (message) {
+                if (visibleCards === 0) {
+                    message.textContent = "No matching services found.";
+                } else {
+                    message.textContent = "";
+                }
             }
 
         });
 
     }
 
-});
 
-// Smart Scroll Buttons
-
-document.addEventListener("DOMContentLoaded", function () {
+    // =====================================
+    // 3. BACK TO TOP AND SCROLL DOWN
+    // =====================================
 
     const backToTop = document.getElementById("backToTop");
     const scrollDown = document.getElementById("scrollDown");
 
-    function updateButtons() {
+    function updateScrollButtons() {
 
         const scrollPosition = window.scrollY;
         const pageHeight = document.documentElement.scrollHeight;
@@ -78,56 +80,77 @@ document.addEventListener("DOMContentLoaded", function () {
         if (scrollDown) {
             scrollDown.style.display =
                 scrollPosition + windowHeight < pageHeight - 50
-                ? "block" : "none";
+                    ? "block"
+                    : "none";
         }
 
     }
 
-    window.addEventListener("scroll", updateButtons);
-    window.addEventListener("resize", updateButtons);
+    window.addEventListener("scroll", updateScrollButtons);
+    window.addEventListener("resize", updateScrollButtons);
 
-    updateButtons();
+    updateScrollButtons();
 
     if (backToTop) {
         backToTop.addEventListener("click", function () {
+
             window.scrollTo({
                 top: 0,
                 behavior: "smooth"
             });
+
         });
     }
 
     if (scrollDown) {
         scrollDown.addEventListener("click", function () {
+
             window.scrollTo({
                 top: document.documentElement.scrollHeight,
                 behavior: "smooth"
             });
+
         });
     }
 
-});
 
-// Reading Progress Bar
+    // =====================================
+    // 4. READING PROGRESS BAR
+    // =====================================
 
-window.addEventListener("scroll", function () {
+    const progressBar = document.getElementById("progressBar");
 
-    const scrollTop = window.scrollY;
-    const pageHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
+    function updateProgressBar() {
 
-    const progress = (scrollTop / pageHeight) * 100;
+        if (!progressBar) return;
 
-    document.getElementById("progressBar").style.width =
-        progress + "%";
+        const scrollTop = window.scrollY;
 
-});
+        const pageHeight =
+            document.documentElement.scrollHeight - window.innerHeight;
 
-// Active Navigation Highlight
+        let progress = 0;
 
-document.addEventListener("DOMContentLoaded", function () {
+        if (pageHeight > 0) {
+            progress = (scrollTop / pageHeight) * 100;
+        }
+
+        progressBar.style.width = progress + "%";
+
+    }
+
+    window.addEventListener("scroll", updateProgressBar);
+    window.addEventListener("resize", updateProgressBar);
+
+    updateProgressBar();
+
+
+    // =====================================
+    // 5. ACTIVE NAVIGATION HIGHLIGHT
+    // =====================================
 
     const sections = document.querySelectorAll("section[id]");
+
     const navLinks = document.querySelectorAll(
         ".navbar .nav-link[href^='#']"
     );
@@ -136,12 +159,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let currentSection = "";
 
+        const scrollPosition = window.scrollY + 180;
+
         sections.forEach(function (section) {
 
             const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
 
-            if (window.scrollY >= sectionTop - 150) {
-                currentSection = section.getAttribute("id");
+            if (
+                scrollPosition >= sectionTop &&
+                scrollPosition < sectionBottom
+            ) {
+                currentSection = section.id;
             }
 
         });
@@ -150,7 +179,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             link.classList.remove("active");
 
-            if (link.getAttribute("href") === "#" + currentSection) {
+            const linkTarget = link.getAttribute("href");
+
+            if (linkTarget === "#" + currentSection && currentSection !== "") {
                 link.classList.add("active");
             }
 
@@ -159,6 +190,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     window.addEventListener("scroll", updateActiveLink);
+    window.addEventListener("resize", updateActiveLink);
+
     updateActiveLink();
 
 });
