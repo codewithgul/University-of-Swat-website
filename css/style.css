@@ -1,3 +1,15 @@
+/* Professional Typography */
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5,
+.navbar-brand {
+    font-family: 'Merriweather', serif;
+}
+
+
 /* General Styling */
 /* Smooth Scrolling */
 html {
@@ -9,43 +21,108 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Navigation Bar */
+/* Premium University Navigation */
+
 .university-navbar {
     background-color: #06452E;
-    padding: 18px 0;
+    padding: 17px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
+    transition: padding 0.3s ease;
 }
+
+/* University Branding */
 
 .navbar-brand {
-    font-size: 22px;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #FFFFFF !important;
 }
 
-.nav-link {
-    margin-left: 12px;
+/* Navigation Links */
+
+.university-navbar .nav-link {
     position: relative;
+    margin: 0 9px;
+    padding: 8px 2px !important;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFFFFF !important;
+    transition: color 0.3s ease;
 }
 
-.nav-link:hover {
+/* Animated Gold Underline */
+
+.university-navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 0;
+    height: 2px;
+    background-color: #D6A62E;
+    transition: width 0.3s ease;
+}
+
+.university-navbar .nav-link:hover::after,
+.university-navbar .nav-link.active::after {
+    width: 100%;
+}
+
+/* Hover and Active States */
+
+.university-navbar .nav-link:hover,
+.university-navbar .nav-link.active {
     color: #D6A62E !important;
-    text-decoration: underline;
-    text-decoration-color: #D6A62E;
-    text-underline-offset: 6px;
 }
 
-.nav-link.active {
-    color: #D6A62E !important;
-    font-weight: bold;
+/* Keyboard Accessibility */
+
+.university-navbar .nav-link:focus-visible {
+    outline: 2px solid #D6A62E;
+    outline-offset: 5px;
 }
 
-/* Welcome Section */
+/* Mobile Navigation */
+
+@media (max-width: 991px) {
+
+    .university-navbar {
+        padding: 13px 0;
+    }
+
+    .university-navbar .navbar-collapse {
+        padding: 15px 0 5px;
+    }
+
+    .university-navbar .nav-link {
+        display: inline-block;
+        margin: 5px 0;
+    }
+
+}
+
+/* Premium Hero Section */
+
 .hero-section {
-    background-color: #F3F6F3;
+    min-height: 480px;
     padding: 100px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     text-align: center;
 
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.55),
-        rgba(0, 0, 0, 0.55)
-    ), url("../images/campus.jpg");
+    background-image:
+        linear-gradient(
+            rgba(0, 25, 15, 0.60),
+            rgba(0, 25, 15, 0.60)
+        ),
+        url("../images/campus.jpg");
 
     background-size: cover;
     background-position: center;
@@ -53,27 +130,54 @@ body {
 }
 
 .hero-section h1 {
-    color:#FFFFFF
+    color: #FFFFFF;
+    font-size: clamp(32px, 4.5vw, 54px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
 }
 
 .hero-section p {
-    color:#FFFFFF
+    color: #F3F6F3;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .hero-section .btn {
     background-color: #06452E;
     color: #FFFFFF;
     border: 2px solid #D6A62E;
-    padding: 12px 28px;
-    font-weight: bold;
+
+    padding: 14px 32px;
+
+    font-size: 16px;
+    font-weight: 600;
+
     border-radius: 5px;
-    transition: 0.3s ease;
+
+    transition: all 0.3s ease;
 }
 
 .hero-section .btn:hover {
-    background-color: #A8D5B5;
+    background-color: #D6A62E;
     color: #06452E;
-    border-color: #A8D5B5;
+    border-color: #D6A62E;
+    transform: translateY(-3px);
+}
+
+/* Mobile Hero */
+
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 400px;
+        padding: 75px 18px;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+    }
 }
 
 /* About University Section */
@@ -476,4 +580,409 @@ body {
         padding: 70px 15px;
     }
 
+}
+
+/* Student Quick Access Dashboard */
+
+.quick-access {
+    background-color: #F3F6F3;
+}
+
+.quick-access h2 {
+    color: #06452E;
+    font-weight: 700;
+}
+
+.quick-access p {
+    color: #555;
+}
+
+.quick-card {
+    background-color: #ffffff;
+    padding: 25px 15px;
+    border-radius: 12px;
+    text-align: center;
+    height: 100%;
+    border: 1px solid #e0e8e0;
+    transition: 0.3s ease;
+}
+
+.quick-card:hover {
+    transform: translateY(-5px);
+    border-color: #D6A62E;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quick-card h5 {
+    color: #06452E;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.quick-card .btn {
+    background-color: #06452E;
+    border: none;
+}
+
+.quick-card .btn:hover {
+    background-color: #087A50;
+}
+/* Student Search */
+
+.student-search {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.student-search input {
+    padding: 12px 15px;
+    border: 2px solid #06452E;
+    border-radius: 8px;
+}
+
+.student-search input:focus {
+    border-color: #D6A62E;
+    box-shadow: 0 0 5px rgba(214, 166, 46, 0.3);
+}
+
+#search-message {
+    margin-top: 10px;
+    color: #06452E;
+}
+
+/* Back to Top Button */
+
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #06452E;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #D6A62E;
+    color: #06452E;
+}
+
+/* Scroll Down Button */
+
+#scrollDown {
+    position: fixed;
+    bottom: 80px;
+    right: 25px;
+    background-color: #06452E;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#scrollDown:hover {
+    background-color: #D6A62E;
+    color: #06452E;
+}
+
+/* Smooth Scrolling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reading Progress Bar */
+
+#progressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background-color: #D6A62E;
+    z-index: 2000;
+    transition: width 0.1s ease;
+}
+
+/* Active Navigation Link */
+
+.navbar .nav-link.active {
+    color: #D6A62E !important;
+    font-weight: 700;
+}
+
+/* Consistent Section Design */
+
+.highlights-section,
+.links-section,
+.quick-access,
+.about-section,
+.academics-section,
+.admissions-section,
+.news-section,
+.contact-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* Consistent Section Headings */
+
+.highlights-section h2,
+.links-section h2,
+.quick-access h2,
+.about-section h2,
+.academics-section h2,
+.admissions-section h2,
+.news-section h2,
+.contact-section h2 {
+    font-size: clamp(26px, 3vw, 34px);
+    line-height: 1.3;
+    font-weight: 700;
+    margin-bottom: 18px;
+    letter-spacing: -0.5px;
+}
+
+/* Section Descriptions */
+
+.section-description {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* Premium University Highlight Cards */
+
+.highlight-card {
+    position: relative;
+    background-color: #FFFFFF;
+    padding: 40px 28px;
+    text-align: left;
+    border-radius: 8px;
+    height: 100%;
+
+    border: 1px solid #E5EAE5;
+    border-top: 3px solid #D6A62E;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+}
+
+.highlight-card h3 {
+    color: #06452E;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.highlight-card p {
+    color: #626B65;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* Premium Academic Department Cards */
+.department-card {
+    background: #FFFFFF;
+    padding: 35px 28px;
+    border-radius: 8px;
+    height: 100%;
+    border: 1px solid #E5EAE5;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.department-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+    border-color: #D6A62E;
+}
+
+.department-card h3 {
+    color: #06452E;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.department-card p {
+    color: #626B65;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Premium Admissions Cards */
+.admission-card {
+    background: #FFFFFF;
+    padding: 35px 28px;
+    border-radius: 8px;
+    height: 100%;
+    border: 1px solid #E5EAE5;
+    border-bottom: 3px solid #D6A62E;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admission-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+}
+
+.admission-card h3 {
+    color: #06452E;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.admission-card p {
+    color: #626B65;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Premium News Cards */
+.news-card {
+    background: #FFFFFF;
+    border: 1px solid #E5EAE5;
+    border-radius: 8px;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+}
+
+.news-card h3 {
+    color: #06452E;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.news-card p {
+    color: #626B65;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.news-card a {
+    color: #06452E;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.news-card a:hover {
+    color: #B68A20;
+}
+
+/* Premium Contact Section */
+.contact-section {
+    background: #F3F6F3;
+    padding: 80px 20px;
+}
+
+.contact-section h2 {
+    color: #06452E;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.contact-section p {
+    color: #626B65;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.contact-section a {
+    color: #06452E;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-section a:hover {
+    color: #B68A20;
+    text-decoration: underline;
+}
+
+/* Fix Contact Button Visibility */
+.contact-section .btn {
+    background-color: #06452E;
+    color: #FFFFFF !important;
+    border: 2px solid #06452E;
+    padding: 12px 28px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.contact-section .btn:hover {
+    background-color: #D6A62E;
+    color: #06452E !important;
+    border-color: #D6A62E;
+}
+
+/* Premium University Footer */
+footer {
+    background: #043823;
+    color: #FFFFFF;
+    padding: 35px 20px;
+    text-align: center;
+    border-top: 3px solid #D6A62E;
+}
+
+footer p {
+    color: #E5EAE5;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #D6A62E;
+}
+
+/* Mobile Navigation Toggle */
+.university-navbar .navbar-toggler {
+    border: 1px solid #D6A62E;
+    padding: 6px 10px;
+}
+
+.university-navbar .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+.university-navbar .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(214, 166, 46, 0.35);
 }

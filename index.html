@@ -7,6 +7,11 @@
 
     <title>University of Swat | Official Website</title>
 
+    <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet">
@@ -17,6 +22,9 @@
 
 <body>
 
+    <!-- Reading Progress Bar -->
+<div id="progressBar"></div>
+
     <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark university-navbar">
     <div class="container">
@@ -26,10 +34,15 @@
         </a>
 
         <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarMenu"
+    aria-controls="navbarMenu"
+    aria-expanded="false"
+    aria-label="Toggle navigation">
+
+    <span class="navbar-toggler-icon"></span>
+
+</button>
 
         <div class="collapse navbar-collapse" id="navbarMenu">
             <ul class="navbar-nav ms-auto">
@@ -73,7 +86,7 @@
             research, and innovation.
         </p>
 
-        <a href="#" class="btn mt-3">
+        <a href="#about" class="btn mt-3">
             Explore Our University
         </a>
     </div>
@@ -194,6 +207,67 @@
 
 </section>
 
+<!-- Student Quick Access Dashboard -->
+<section id="quick-access" class="quick-access py-5">
+    <div class="container">
+
+        <div class="text-center mb-4">
+            <h2>Student Quick Access</h2>
+            <p>Access important university services in one place.</p>
+            <p id="current-date"></p>
+
+            <div class="student-search mb-4">
+    <input
+        type="search"
+        id="student-search"
+        class="form-control"
+        placeholder="Search student services..."
+    >
+    <p id="search-message"></p>
+</div>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-3 col-sm-6">
+                <div class="quick-card">
+                    <h5>Student Portal</h5>
+                    <p>Access student academic services.</p>
+                    <a href="https://cms1.uswat.edu.pk"
+                       class="btn btn-success">Visit Portal</a>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="quick-card">
+                    <h5>Admissions</h5>
+                    <p>Explore admission information.</p>
+                    <a href="https://uswat.edu.pk"
+                       class="btn btn-success">Explore</a>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="quick-card">
+                    <h5>Departments</h5>
+                    <p>Explore academic departments.</p>
+                    <a href="#academics"
+                       class="btn btn-success">View Departments</a>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="quick-card">
+                    <h5>Examinations</h5>
+                    <p>Access examination services.</p>
+                    <a href="https://cms1.uswat.edu.pk"
+                       class="btn btn-success">Explore</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 <!-- About University Section -->
 <section class="about-section" id="about">
@@ -238,41 +312,47 @@
 
         <div class="row g-4">
 
-            <!-- Department 1 -->
-            <div class="col-md-4">
-                <div class="department-card">
-                    <h3>Computer Science</h3>
-                    <p>
-                        Explore computing, programming,
-                        technology and innovation.
-                    </p>
-                    <a href="#">Explore Department →</a>
-                </div>
-            </div>
+            <div class="col-md-6 col-lg-4">
+    <div class="department-card">
+        <h3>Computer & Software Technology</h3>
+        <p>Explore computing, programming, software development, and modern technology.</p>
+    </div>
+</div>
 
-            <!-- Department 2 -->
-            <div class="col-md-4">
-                <div class="department-card">
-                    <h3>Business Studies</h3>
-                    <p>
-                        Discover business, management
-                        and entrepreneurship.
-                    </p>
-                    <a href="#">Explore Department →</a>
-                </div>
-            </div>
+<div class="col-md-6 col-lg-4">
+    <div class="department-card">
+        <h3>Management & Commerce</h3>
+        <p>Develop knowledge of business management, leadership, and commerce.</p>
+    </div>
+</div>
 
-            <!-- Department 3 -->
-            <div class="col-md-4">
-                <div class="department-card">
-                    <h3>Environmental Sciences</h3>
-                    <p>
-                        Learn about environmental
-                        studies and sustainability.
-                    </p>
-                    <a href="#">Explore Department →</a>
-                </div>
-            </div>
+<div class="col-md-6 col-lg-4">
+    <div class="department-card">
+        <h3>Environmental Sciences</h3>
+        <p>Study environmental challenges, conservation, and sustainable development.</p>
+    </div>
+</div>
+
+<div class="col-md-6 col-lg-4">
+    <div class="department-card">
+        <h3>Economics & Development Studies</h3>
+        <p>Understand economic systems, development, and social progress.</p>
+    </div>
+</div>
+
+<div class="col-md-6 col-lg-4">
+    <div class="department-card">
+        <h3>Archaeology</h3>
+        <p>Discover ancient civilizations, historical discoveries, and cultural heritage.</p>
+    </div>
+</div>
+
+<div class="col-md-6 col-lg-4">
+    <div class="department-card">
+        <h3>Zoology</h3>
+        <p>Explore animal life, biodiversity, and biological sciences.</p>
+    </div>
+</div>
 
         </div>
 
@@ -355,39 +435,27 @@
             <!-- News Card 1 -->
             <div class="col-md-4">
                 <div class="news-card">
-                    <span class="news-category">Admissions</span>
-                    <h3>Admission Updates</h3>
-                    <p>
-                        Find information about admission
-                        announcements and application procedures.
-                    </p>
-                    <a href="#">Read More</a>
+                    <h3>Academic Updates</h3>
+<p>Stay informed about academic schedules, examination notices, semester activities, and important university announcements.</p>
+<a href="https://uswat.edu.pk/" target="_blank" rel="noopener noreferrer">Visit University Website →</a>
                 </div>
             </div>
 
             <!-- News Card 2 -->
             <div class="col-md-4">
                 <div class="news-card">
-                    <span class="news-category">Examinations</span>
-                    <h3>Examination Notices</h3>
-                    <p>
-                        Stay updated with examination
-                        schedules and important notices.
-                    </p>
-                    <a href="#">Read More</a>
+                    <h3>Research & Innovation</h3>
+<p>Explore research activities, academic achievements, scientific developments, and opportunities for innovation.</p>
+<a href="https://uswat.edu.pk/" target="_blank" rel="noopener noreferrer">Explore University →</a>
                 </div>
             </div>
 
             <!-- News Card 3 -->
             <div class="col-md-4">
                 <div class="news-card">
-                    <span class="news-category">Events</span>
-                    <h3>University Events</h3>
-                    <p>
-                        Discover academic activities,
-                        events and campus announcements.
-                    </p>
-                    <a href="#">Read More</a>
+                    <h3>Campus Activities</h3>
+<p>Discover student activities, educational events, seminars, workshops, and opportunities to participate in university life.</p>
+<a href="https://uswat.edu.pk/" target="_blank" rel="noopener noreferrer">Learn More →</a>
                 </div>
             </div>
 
@@ -464,6 +532,16 @@
 
     <!-- Custom JavaScript -->
     <script src="js/script.js"></script>
+
+    <!-- Back to Top Button -->
+<button id="backToTop" title="Back to Top">
+    ↑
+</button>
+
+<!-- Scroll to Bottom Button -->
+<button id="scrollDown" title="Scroll to Bottom">
+    ↓
+</button>
 
 </body>
 </html>
