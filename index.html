@@ -299,7 +299,7 @@
     </div>
 </section>
 
-<!-- Academics Section -->
+<!-- Academic Departments Section -->
 <section class="academics-section" id="academics">
 
     <div class="container">
@@ -310,49 +310,91 @@
             Explore academic opportunities and fields of study.
         </p>
 
-        <div class="row g-4">
+        <div class="department-list">
 
-            <div class="col-md-6 col-lg-4">
-    <div class="department-card">
-        <h3>Computer & Software Technology</h3>
-        <p>Explore computing, programming, software development, and modern technology.</p>
-    </div>
-</div>
+            <details class="department-item">
+                <summary>
+                    <span class="department-number">01</span>
+                    <span class="department-name">
+                        Computer & Software Technology
+                    </span>
+                    <span class="department-arrow">+</span>
+                </summary>
+                <p>
+                    Explore computing, programming, software development,
+                    and modern technology.
+                </p>
+            </details>
 
-<div class="col-md-6 col-lg-4">
-    <div class="department-card">
-        <h3>Management & Commerce</h3>
-        <p>Develop knowledge of business management, leadership, and commerce.</p>
-    </div>
-</div>
+            <details class="department-item">
+                <summary>
+                    <span class="department-number">02</span>
+                    <span class="department-name">
+                        Management & Commerce
+                    </span>
+                    <span class="department-arrow">+</span>
+                </summary>
+                <p>
+                    Develop knowledge of business management,
+                    leadership, and commerce.
+                </p>
+            </details>
 
-<div class="col-md-6 col-lg-4">
-    <div class="department-card">
-        <h3>Environmental Sciences</h3>
-        <p>Study environmental challenges, conservation, and sustainable development.</p>
-    </div>
-</div>
+            <details class="department-item">
+                <summary>
+                    <span class="department-number">03</span>
+                    <span class="department-name">
+                        Environmental Sciences
+                    </span>
+                    <span class="department-arrow">+</span>
+                </summary>
+                <p>
+                    Study environmental challenges, conservation,
+                    and sustainable development.
+                </p>
+            </details>
 
-<div class="col-md-6 col-lg-4">
-    <div class="department-card">
-        <h3>Economics & Development Studies</h3>
-        <p>Understand economic systems, development, and social progress.</p>
-    </div>
-</div>
+            <details class="department-item">
+                <summary>
+                    <span class="department-number">04</span>
+                    <span class="department-name">
+                        Economics & Development Studies
+                    </span>
+                    <span class="department-arrow">+</span>
+                </summary>
+                <p>
+                    Understand economic systems, development,
+                    and social progress.
+                </p>
+            </details>
 
-<div class="col-md-6 col-lg-4">
-    <div class="department-card">
-        <h3>Archaeology</h3>
-        <p>Discover ancient civilizations, historical discoveries, and cultural heritage.</p>
-    </div>
-</div>
+            <details class="department-item">
+                <summary>
+                    <span class="department-number">05</span>
+                    <span class="department-name">
+                        Archaeology
+                    </span>
+                    <span class="department-arrow">+</span>
+                </summary>
+                <p>
+                    Discover ancient civilizations, historical
+                    discoveries, and cultural heritage.
+                </p>
+            </details>
 
-<div class="col-md-6 col-lg-4">
-    <div class="department-card">
-        <h3>Zoology</h3>
-        <p>Explore animal life, biodiversity, and biological sciences.</p>
-    </div>
-</div>
+            <details class="department-item">
+                <summary>
+                    <span class="department-number">06</span>
+                    <span class="department-name">
+                        Zoology
+                    </span>
+                    <span class="department-arrow">+</span>
+                </summary>
+                <p>
+                    Explore animal life, biodiversity,
+                    and biological sciences.
+                </p>
+            </details>
 
         </div>
 
@@ -419,7 +461,7 @@
 </section>
 
 
-<!-- Latest News Section -->
+<!-- Latest News & Announcements Section -->
 <section class="news-section" id="news">
 
     <div class="container">
@@ -427,39 +469,113 @@
         <h2 class="text-center">Latest News & Announcements</h2>
 
         <p class="text-center section-description">
-            Stay informed about university updates and activities.
+            Stay informed about university updates, research and campus activities.
         </p>
 
-        <div class="row g-4">
+        <!-- News Filter Buttons -->
+        <div class="news-filters text-center mb-5">
 
-            <!-- News Card 1 -->
-            <div class="col-md-4">
+            <button class="news-filter active"
+                    data-filter="all"
+                    aria-pressed="true">
+                All Updates
+            </button>
+
+            <button class="news-filter"
+                    data-filter="academic"
+                    aria-pressed="false">
+                Academic
+            </button>
+
+            <button class="news-filter"
+                    data-filter="research"
+                    aria-pressed="false">
+                Research
+            </button>
+
+            <button class="news-filter"
+                    data-filter="campus"
+                    aria-pressed="false">
+                Campus
+            </button>
+
+        </div>
+
+        <!-- News Cards -->
+        <div class="row g-4" id="news-container">
+
+            <div class="col-md-4 news-item" data-category="academic">
                 <div class="news-card">
-                    <h3>Academic Updates</h3>
-<p>Stay informed about academic schedules, examination notices, semester activities, and important university announcements.</p>
-<a href="https://uswat.edu.pk/" target="_blank" rel="noopener noreferrer">Visit University Website →</a>
+                    <div class="news-card-content">
+                        <span class="news-category">ACADEMIC</span>
+
+                        <h3>Academic Updates</h3>
+
+                        <p>
+                            Stay informed about academic schedules,
+                            examination notices, semester activities
+                            and important university announcements.
+                        </p>
+
+                        <a href="https://uswat.edu.pk/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Visit University Website →
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <!-- News Card 2 -->
-            <div class="col-md-4">
+            <div class="col-md-4 news-item" data-category="research">
                 <div class="news-card">
-                    <h3>Research & Innovation</h3>
-<p>Explore research activities, academic achievements, scientific developments, and opportunities for innovation.</p>
-<a href="https://uswat.edu.pk/" target="_blank" rel="noopener noreferrer">Explore University →</a>
+                    <div class="news-card-content">
+                        <span class="news-category">RESEARCH</span>
+
+                        <h3>Research & Innovation</h3>
+
+                        <p>
+                            Explore research activities, academic
+                            achievements, scientific developments
+                            and opportunities for innovation.
+                        </p>
+
+                        <a href="https://uswat.edu.pk/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Explore University →
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <!-- News Card 3 -->
-            <div class="col-md-4">
+            <div class="col-md-4 news-item" data-category="campus">
                 <div class="news-card">
-                    <h3>Campus Activities</h3>
-<p>Discover student activities, educational events, seminars, workshops, and opportunities to participate in university life.</p>
-<a href="https://uswat.edu.pk/" target="_blank" rel="noopener noreferrer">Learn More →</a>
+                    <div class="news-card-content">
+                        <span class="news-category">CAMPUS LIFE</span>
+
+                        <h3>Campus Activities</h3>
+
+                        <p>
+                            Discover student activities, educational
+                            events, seminars, workshops and opportunities
+                            to participate in university life.
+                        </p>
+
+                        <a href="https://uswat.edu.pk/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Learn More →
+                        </a>
+                    </div>
                 </div>
             </div>
 
         </div>
+
+        <p id="no-news-message" class="text-center mt-4" hidden>
+            No updates found in this category.
+        </p>
+
     </div>
 
 </section>

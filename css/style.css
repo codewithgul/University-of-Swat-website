@@ -788,3 +788,215 @@ footer a:hover {
     }
 
 }
+
+/* NEWS FILTER BUTTONS */
+
+.news-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.news-filter {
+    background-color: var(--white);
+    color: var(--primary-green);
+    border: 1px solid var(--primary-green);
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.news-filter:hover,
+.news-filter.active {
+    background-color: var(--primary-green);
+    color: var(--white);
+    border-color: var(--primary-green);
+}
+
+.news-filter:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+
+.news-card-content {
+    padding: 30px;
+}
+
+.news-card[hidden] {
+    display: none !important;
+}
+
+.news-category {
+    display: inline-block;
+    background-color: #EAF3ED;
+    color: var(--primary-green);
+    padding: 6px 12px;
+    border-radius: 4px;
+    letter-spacing: 0.8px;
+}
+
+@media (max-width: 576px) {
+    .news-filter {
+        padding: 9px 16px;
+        font-size: 13px;
+    }
+
+    .news-card-content {
+        padding: 24px;
+    }
+}
+
+/* COMPACT ACADEMIC DEPARTMENT DIRECTORY */
+
+.department-list {
+    max-width: 900px;
+    margin: 35px auto 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.department-item {
+    border-bottom: 1px solid var(--border-color);
+    padding: 0;
+}
+
+.department-item summary {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 12px;
+    cursor: pointer;
+    list-style: none;
+    transition: background-color 0.25s ease;
+}
+
+.department-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.department-item summary:hover {
+    background-color: var(--light-background);
+}
+
+.department-number {
+    color: var(--gold-hover);
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 28px;
+}
+
+.department-name {
+    flex: 1;
+    color: var(--primary-green);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.department-arrow {
+    color: var(--primary-green);
+    font-size: 23px;
+    font-weight: 400;
+    transition: transform 0.25s ease;
+}
+
+.department-item[open] .department-arrow {
+    transform: rotate(45deg);
+}
+
+.department-item p {
+    padding: 0 55px 18px;
+    margin: 0;
+    color: var(--muted-text);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.department-item summary:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: -2px;
+}
+
+@media (max-width: 576px) {
+
+    .department-item summary {
+        gap: 12px;
+        padding: 17px 5px;
+    }
+
+    .department-name {
+        font-size: 14px;
+    }
+
+    .department-item p {
+        padding: 0 45px 16px;
+        font-size: 13px;
+    }
+
+}
+
+/* FINAL ACADEMICS DESIGN OVERRIDE */
+
+.academics-section .department-list {
+    display: block !important;
+    max-width: 900px;
+    margin: 35px auto 0;
+    border-top: 1px solid #E5EAE5;
+}
+
+.academics-section .department-item {
+    display: block !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid #E5EAE5 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.academics-section .department-item summary {
+    display: flex !important;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 12px !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    cursor: pointer;
+    list-style: none;
+}
+
+.academics-section .department-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.academics-section .department-item summary:hover {
+    background: #F3F6F3 !important;
+}
+
+.academics-section .department-item p {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 55px 18px !important;
+    margin: 0 !important;
+    line-height: 1.8;
+}
+
+.academics-section .department-item[open] .department-arrow {
+    transform: rotate(45deg);
+}
+
+@media (max-width: 576px) {
+    .academics-section .department-item summary {
+        gap: 12px;
+        padding: 17px 5px !important;
+    }
+
+    .academics-section .department-item p {
+        padding: 0 45px 16px !important;
+    }
+}

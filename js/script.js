@@ -195,3 +195,52 @@ document.addEventListener("DOMContentLoaded", function () {
     updateActiveLink();
 
 });
+
+// NEWS & ANNOUNCEMENTS FILTER
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const filterButtons = document.querySelectorAll(".news-filter");
+    const newsItems = document.querySelectorAll(".news-item");
+    const noNewsMessage = document.getElementById("no-news-message");
+
+    filterButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            const selectedCategory = button.dataset.filter;
+            let visibleCount = 0;
+
+            filterButtons.forEach(function (item) {
+                item.classList.remove("active");
+                item.setAttribute("aria-pressed", "false");
+            });
+
+            button.classList.add("active");
+            button.setAttribute("aria-pressed", "true");
+
+            newsItems.forEach(function (item) {
+
+                const category = item.dataset.category;
+
+                const shouldShow =
+                    selectedCategory === "all" ||
+                    selectedCategory === category;
+
+                item.hidden = !shouldShow;
+
+                if (shouldShow) {
+                    visibleCount++;
+                }
+
+            });
+
+            if (noNewsMessage) {
+                noNewsMessage.hidden = visibleCount !== 0;
+            }
+
+        });
+
+    });
+
+});
