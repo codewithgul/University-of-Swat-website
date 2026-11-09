@@ -244,3 +244,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+// Campus Gallery Filters
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const filterButtons = document.querySelectorAll(".gallery-filter");
+    const galleryItems = document.querySelectorAll(".gallery-item");
+
+    filterButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            const selectedFilter = button.dataset.filter;
+
+            filterButtons.forEach(function (btn) {
+                btn.classList.remove("active");
+            });
+
+            button.classList.add("active");
+
+            galleryItems.forEach(function (item) {
+
+                const category = item.dataset.category;
+
+                if (selectedFilter === "all" || category === selectedFilter) {
+                    item.classList.remove("hidden");
+                } else {
+                    item.classList.add("hidden");
+                }
+
+            });
+
+        });
+
+    });
+
+});

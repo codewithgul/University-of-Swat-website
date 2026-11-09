@@ -1352,3 +1352,80 @@ footer a:hover {
         padding: 0 35px 18px 8px;
     }
 }
+
+/* Campus Gallery */
+
+.campus-gallery-section {
+    background: var(--light-background);
+}
+
+.campus-gallery-section .section-subtitle {
+    color: var(--secondary-green);
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.campus-gallery-section h2 {
+    color: var(--primary-green);
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.campus-gallery-section .section-heading p {
+    color: var(--muted-text);
+}
+
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery-filter {
+    border: 1px solid var(--primary-green);
+    background: transparent;
+    color: var(--primary-green);
+    padding: 8px 18px;
+    border-radius: 25px;
+    transition: 0.3s ease;
+    font-weight: 600;
+}
+
+.gallery-filter:hover,
+.gallery-filter.active {
+    background: var(--primary-green);
+    color: white;
+}
+
+.gallery-item {
+    position: relative;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-caption {
+    color: var(--primary-green);
+    font-weight: 600;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.gallery-item.hidden {
+    display: none;
+}
