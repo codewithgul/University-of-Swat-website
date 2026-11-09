@@ -1429,3 +1429,26 @@ footer a:hover {
 .gallery-item.hidden {
     display: none;
 }
+
+/* Responsive Campus Gallery */
+
+@media (max-width: 767px) {
+    #campusGallery {
+        --bs-gutter-x: 10px;
+        --bs-gutter-y: 12px;
+    }
+
+    #campusGallery .gallery-item {
+        width: 33.333333%;
+    }
+
+    #campusGallery .gallery-item img {
+        height: 110px;
+        object-fit: cover;
+    }
+
+    #campusGallery .gallery-caption {
+        font-size: 11px;
+        padding-top: 5px;
+    }
+}
