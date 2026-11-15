@@ -281,3 +281,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+// University Website Loading Screen
+
+window.addEventListener("load", function () {
+
+    const loader = document.getElementById("loader");
+
+    if (loader) {
+        setTimeout(function () {
+            loader.classList.add("loader-hidden");
+        }, 1500);
+    }
+
+});
