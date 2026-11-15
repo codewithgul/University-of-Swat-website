@@ -1619,3 +1619,19 @@ footer a:hover {
     }
 
 }
+
+/* Desktop Navbar Improvements */
+@media (min-width: 992px) {
+
+    .university-navbar .navbar-nav {
+        gap: 12px;
+        margin-right: 35px;
+    }
+
+    .university-navbar .nav-link {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 12px 10px !important;
+    }
+
+}

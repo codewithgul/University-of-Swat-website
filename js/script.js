@@ -296,27 +296,27 @@ window.addEventListener("load", function () {
 
 });
 
-// Close Mobile Navbar After Clicking a Link
-
+// Close Mobile Navbar After Selecting a Menu Item
 document.addEventListener("DOMContentLoaded", function () {
 
-    const navbarMenu = document.querySelector(".navbar-collapse");
-    const navbarLinks = document.querySelectorAll(
-    ".navbar-collapse .nav-link, .navbar-collapse .dropdown-item"
-);
+    const navbarMenu = document.querySelector("#navbarMenu");
 
     if (!navbarMenu) return;
 
-    navbarLinks.forEach(function (link) {
+    navbarMenu.addEventListener("click", function (event) {
 
-        link.addEventListener("click", function () {
+        const clickedLink = event.target.closest(
+            ".nav-link:not(.dropdown-toggle), .dropdown-item"
+        );
 
-            if (navbarMenu.classList.contains("show")) {
-                const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarMenu);
-                bsCollapse.hide();
-            }
+        if (!clickedLink) return;
 
-        });
+        if (navbarMenu.classList.contains("show")) {
+            const bsCollapse =
+                bootstrap.Collapse.getOrCreateInstance(navbarMenu);
+
+            bsCollapse.hide();
+        }
 
     });
 
