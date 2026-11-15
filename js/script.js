@@ -291,7 +291,7 @@ window.addEventListener("load", function () {
     if (loader) {
         setTimeout(function () {
             loader.classList.add("loader-hidden");
-        }, 1500);
+        }, 700);
     }
 
 });
