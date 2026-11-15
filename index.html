@@ -47,64 +47,156 @@
     <!-- Reading Progress Bar -->
 <div id="progressBar"></div>
 
-    <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark university-navbar">
-    <div class="container">
+    <div class="container-fluid px-lg-4 px-3">
 
+        <!-- University Logo and Name -->
         <a class="navbar-brand d-flex align-items-center" href="#home">
+
             <img src="images/university-logo.png"
-         alt="University of Swat Logo"
-         class="university-logo me-2">
+                 alt="University of Swat Logo"
+                 class="university-logo me-2">
 
-    <span>UNIVERSITY OF SWAT</span>
-</a>
+            <span>UNIVERSITY OF SWAT</span>
 
+        </a>
+
+        <!-- Mobile Menu Button -->
         <button class="navbar-toggler" type="button"
-    data-bs-toggle="collapse"
-    data-bs-target="#navbarMenu"
-    aria-controls="navbarMenu"
-    aria-expanded="false"
-    aria-label="Toggle navigation">
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
 
-    <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
 
-</button>
+        </button>
 
+        <!-- Navigation Links -->
         <div class="collapse navbar-collapse" id="navbarMenu">
+
             <ul class="navbar-nav ms-auto">
 
+                <!-- Home -->
                 <li class="nav-item">
                     <a class="nav-link active" href="#home">Home</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
+                <!-- About Dropdown -->
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       id="aboutDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+
+                        About
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+
+                        <li>
+                            <a class="dropdown-item" href="#about">
+                                About the University
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="#vision-mission">
+                                Vision & Mission
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="#campus-gallery">
+                                Campus Gallery
+                            </a>
+                        </li>
+
+                    </ul>
                 </li>
 
-                <li class="nav-item">
-    <a class="nav-link" href="#campus-gallery">Gallery</a>
-</li>
+                <!-- Study Dropdown -->
+                <li class="nav-item dropdown">
 
-                <li class="nav-item">
-    <a class="nav-link" href="#quick-access">Student Services</a>
-</li>
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       id="studyDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#academics">Academics</a>
+                        Study
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="studyDropdown">
+
+                        <li>
+                            <a class="dropdown-item" href="#academics">
+                                Academic Departments
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="#admissions">
+                                Admissions
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="#quick-access">
+                                Student Services
+                            </a>
+                        </li>
+
+                    </ul>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#admissions">Admissions</a>
+                <!-- Updates Dropdown -->
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       id="updatesDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+
+                        Updates
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="updatesDropdown">
+
+                        <li>
+                            <a class="dropdown-item" href="#news">
+                                News & Events
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="#vacancies">
+                                Vacancies
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="#tenders">
+                                Tenders
+                            </a>
+                        </li>
+
+                    </ul>
                 </li>
 
+                <!-- FAQ -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#news">News & Events</a>
+                    <a class="nav-link" href="#faq">FAQ</a>
                 </li>
 
-                <li class="nav-item">
-    <a class="nav-link" href="#faq">FAQ</a>
-</li>
-
+                <!-- Contact -->
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>

@@ -301,7 +301,9 @@ window.addEventListener("load", function () {
 document.addEventListener("DOMContentLoaded", function () {
 
     const navbarMenu = document.querySelector(".navbar-collapse");
-    const navbarLinks = document.querySelectorAll(".navbar-collapse .nav-link");
+    const navbarLinks = document.querySelectorAll(
+    ".navbar-collapse .nav-link, .navbar-collapse .dropdown-item"
+);
 
     if (!navbarMenu) return;
 
