@@ -295,3 +295,27 @@ window.addEventListener("load", function () {
     }
 
 });
+
+// Close Mobile Navbar After Clicking a Link
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const navbarMenu = document.querySelector(".navbar-collapse");
+    const navbarLinks = document.querySelectorAll(".navbar-collapse .nav-link");
+
+    if (!navbarMenu) return;
+
+    navbarLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            if (navbarMenu.classList.contains("show")) {
+                const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarMenu);
+                bsCollapse.hide();
+            }
+
+        });
+
+    });
+
+});
